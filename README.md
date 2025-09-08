@@ -1,14 +1,14 @@
-# Database Systems
+# NTNU Database Systems
 
 # 114-1 師大資料庫系統
-- 授課教師：蔡芸琤老師
-- 姓名：陳生好
-- 系級：科技系116
+- Instructor : Prof. Tsai Yun-Cheng
+- Name：陳生好
+- Department / Year : TAHRD, Class of 116
 
-## 作業繳交區
+## Homework Submission Area
 ### HW1
 ### HW2
 ### HW3
 ### HW4
 
-## 期末專題繳交區
+## Final Project Submission Area
