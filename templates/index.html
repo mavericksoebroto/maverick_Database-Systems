@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flask + MongoDB Demo</title>
+  <style>
+    body { font-family: Arial; margin: 24px; }
+    textarea { width: 100%; height: 160px; }
+    .flash { color: green; }
+    .item { margin-bottom: 6px; border-bottom: 1px solid #eee; }
+  </style>
+</head>
+<body>
+  <h2>Flask + MongoDB Demo</h2>
+
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div class="flash">{{ messages|join(" | ") }}</div>
+    {% endif %}
+  {% endwith %}
+
+  <h3>Add Single User (insert_one)</h3>
+  <form method="POST" action="/insert_one">
+    Name: <input name="name" required>
+    Age: <input name="age" required>
+    <button>Add</button>
+  </form>
+
+  <h3>Add Multiple Users (insert_many)</h3>
+  <p>Enter as JSON array:</p>
+  <pre>[
+  { "name": "Alice", "age": 25 },
+  { "name": "Bob", "age": 30 }
+]</pre>
+  <form method="POST" action="/insert_many">
+    <textarea name="bulk_json" placeholder='[{"name":"Alice","age":25}]'></textarea>
+    <button>Add Many</button>
+  </form>
+
+  <h3>User List</h3>
+  {% for item in items %}
+    <div class="item">
+      ID: {{ item._id }} | {{ item.name }} ({{ item.age }})
+      <form method="POST" action="/delete/{{ item._id }}" style="display:inline;">
+        <button>Delete</button>
+      </form>
+    </div>
+  {% endfor %}
+</body>
+</html>
