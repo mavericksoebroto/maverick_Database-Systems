@@ -162,7 +162,94 @@ Expected Output:
 Video Demo
 [▶ 114-1 Database Systems HW2](https://youtu.be/ZnJfBQJe74o)
 
-### HW3
+****
+****
+
+### HW3 Flask + MongoDB (insert_many) Deployment
+HW3 Task:
+- Complete the MongoDB frontend based on last week’s material.  
+- Successfully implement the **`insert_many` feature** to insert multiple user records at once.  
+- Deploy the Flask + MongoDB project on Render, and make it available via a public online link.
+
+****
+
+All files related to this homework are located inside the **`Database Systems HW3`** folder:  
+| File | Description |
+|-------------|-------------|
+| `app.py`                | Main Flask application that handles routes, connects to MongoDB Atlas, and implements `insert_one` and `insert_many` features |
+| `requirements.txt`      | Lists all Python dependencies required to run the project |
+| `templates/index.html`  | Web interface with forms to insert single or multiple users, and display all stored data |
+| `.gitignore`            | Specifies files and folders that Git should ignore (e.g., `.venv`, `.DS_Store`) |
+
+****
+
+Environment Variables (on Render):
+| Variable | Purpose |
+|-----------|----------|
+| `MONGODB_URI` | Connection string to MongoDB Atlas |
+| `DBNAME` | Database name (`hw3db`) |
+
+****
+
+To run the project:
+1. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+2. Set up MongoDB connection (example using environment variables):
+    ```bash
+    export MONGODB_URI="mongodb+srv://maverick:maverick2005@cluster0.b8g7ual.mongodb.net/?appName=Cluster0"
+    export DBNAME="hw3db"
+    ```
+
+3. Run the Flask app:
+    ```bash
+    python3 app.py
+    ```
+
+4. Open your browser and go to:
+    ```bash
+    http://127.0.0.1:5001/
+    ```
+
+5. Example JSON for `insert_many`:
+```json
+[
+  {"name": "Alice", "age": 25},
+  {"name": "Bob", "age": 30},
+  {"name": "Charlie", "age": 22},
+  {"name": "Diana", "age": 27},
+  {"name": "Ethan", "age": 35},
+  {"name": "Fiona", "age": 29}
+]
+```
+****
+
+Expected Output:
+
+**Homepage** (`index.html`)
+- Two input sections:
+  - Add Single User (`insert_one`) — form to input one record (name + age).
+  - Add Multiple Users (`insert_many`) — text area to insert multiple JSON documents at once.
+- Below the forms, all records from MongoDB are displayed dynamically with a **Delete** button beside each one.
+
+**MongoDB Atlas**
+- Inserted users are visible in the `hw3db.users` collection.
+- Supports both single and batch insertion through the web interface.
+
+**Render Deployment**
+- The live web app is publicly accessible at:  
+  🔗 [https://database-systems-hw3.onrender.com](https://database-systems-hw3.onrender.com)  
+- Environment variables (`MONGODB_URI`, `DBNAME`) are securely stored in Render settings.
+
+****
+
+Video Demo
+
+****
+****
+
 ### HW4
 
 ## Final Project Submission Area
