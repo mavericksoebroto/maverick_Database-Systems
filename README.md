@@ -254,3 +254,5 @@ Video Demo
 ### HW4
 
 ## Final Project Submission Area
+### First Proposal of Final Project (Week 12)
+[Introduction to the Content](https://www.canva.com/design/DAG4CXETdHg/kgwutq58V9jBhx2OOGmsPw/edit?utm_content=DAG4CXETdHg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
