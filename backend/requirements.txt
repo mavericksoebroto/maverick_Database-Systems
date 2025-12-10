@@ -1,8 +1,7 @@
 Flask==2.3.2
 Flask-SQLAlchemy==3.0.3
 Flask-Migrate==4.0.4
-pymysql==1.0.3
 python-dotenv==1.0.0
 gunicorn==20.1.0
 fpdf2==2.7.9
-psycopg2-binary==2.9.9
+psycopg[binary]
