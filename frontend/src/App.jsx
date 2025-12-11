@@ -6,6 +6,8 @@ import POS from "./pages/POS";
 import Products from "./pages/Products";
 import Suppliers from "./pages/Suppliers";
 
+// Trigger redeploy
+
 export default function App() {
   return (
     <BrowserRouter>
