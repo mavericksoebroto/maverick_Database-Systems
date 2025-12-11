@@ -13,7 +13,7 @@ def create_app():
     migrate = Migrate(app, db)
 
     # Register routes
-    app.register_blueprint(bp)
+    app.register_blueprint(bp, url_prefix="/api")
 
     # Health check for Render
     @app.route("/health")
