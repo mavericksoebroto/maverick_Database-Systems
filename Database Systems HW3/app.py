@@ -6,7 +6,7 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 app.secret_key = "devkey"  # For flash messages
 
-# --- MongoDB connection ---
+ # --- MongoDB connection ---
 MONGODB_URI = os.environ.get("MONGODB_URI")
 DBNAME = os.environ.get("DBNAME", "hw3db")
 
