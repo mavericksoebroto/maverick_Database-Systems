@@ -77,13 +77,13 @@ export default function Dashboard() {
 
         <div className="flex gap-2">
           <button
-            onClick={() => window.open("/api/sales/export/csv", "_blank")}
+            onClick={() => window.open("https://smart-inventory-system-backend.onrender.com/api/sales/export/csv", "_blank")}
             className="text-xs px-3 py-2 rounded-full border border-slate-300 bg-white hover:bg-slate-100 dark:bg-slate-900 dark:border-slate-600 dark:hover:bg-slate-800"
           >
             Export Sales (CSV)
           </button>
           <button
-            onClick={() => window.open("/api/sales/export/pdf", "_blank")}
+            onClick={() => window.open("https://smart-inventory-system-backend.onrender.com/api/sales/export/pdf", "_blank")}
             className="text-xs px-3 py-2 rounded-full border border-slate-900 bg-slate-900 text-white hover:bg-slate-800 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-slate-200"
           >
             Export Sales (PDF)
