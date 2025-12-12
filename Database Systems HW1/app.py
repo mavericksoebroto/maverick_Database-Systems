@@ -4,7 +4,7 @@ from mysql.connector import Error
 
 app = Flask(__name__)
 
-# MySQL connection settings
+ # MySQL connection settings
 db_config = {
     'host': 'localhost',
     'user': 'root',
