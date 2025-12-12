@@ -3,10 +3,14 @@ from config import Config
 from models import db
 from routes import bp
 from flask_migrate import Migrate
+from flask_cors import CORS  # ✅ Add this
 
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
+
+    # ✅ Enable CORS for frontend domain
+    CORS(app, origins=["https://smart-inventory-system-frontend.onrender.com"])
 
     # Initialize DB + Migrations
     db.init_app(app)
