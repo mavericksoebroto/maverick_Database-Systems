@@ -315,9 +315,17 @@ Expected Output:
 
 ****
 
-Video Demo  
-[▶ 114-1 Database Systems HW4](https://youtu.be/9rz9k-LcLz0)
+Video Demo  [▶ 114-1 Database Systems HW4](https://youtu.be/9rz9k-LcLz0)
+
+****
+****
 
 ## Final Project Submission Area
 ### First Proposal of Final Project (Week 12)
 [Introduction to the Content](https://www.canva.com/design/DAG4CXETdHg/kgwutq58V9jBhx2OOGmsPw/edit?utm_content=DAG4CXETdHg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+### Final Submission
+📦 The Smart Inventory System (SIS) is a full-stack web application built to efficiently manage inventory, suppliers, and sales for small businesses or educational environments. SIS provides real-time insights into stock levels, generates low stock alerts, and allows users to track recent transactions through an interactive dashboard. With export capabilities in both CSV and PDF formats, it combines a modern React frontend with a Flask backend, offering a seamless and responsive inventory management experience.
+
+[Smart Inventory System](https://smart-inventory-system-frontend.onrender.com/)
+
+[Final Project Presentation](https://youtu.be/HwBXlVesJ5Y)
