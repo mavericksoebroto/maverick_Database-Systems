@@ -251,7 +251,72 @@ Video Demo
 ****
 ****
 
-### HW4
+### HW4 Flask + MongoDB (Bulk Delete Feature)
+HW4 Task:
+- Extend the previous Flask + MongoDB project by adding a **bulk delete (`delete_many`)** feature.
+- Allow users to select multiple records using checkboxes and delete them with one action.
+- Preserve the original **single delete** functionality.
+- Deploy the updated application to **Render** and demonstrate the feature via a video presentation.
+
+****
+
+All files related to this homework are located inside the **`Database Systems HW4`** folder:
+| File | Description |
+|-------------|-------------|
+| `app.py`                | Main Flask application implementing insert, single delete, and bulk delete features |
+| `requirements.txt`      | Lists all Python dependencies required to run the project |
+| `templates/index.html`  | Web interface with checkbox-based bulk delete and individual delete buttons |
+| `.gitignore`            | Specifies files and folders that Git should ignore |
+
+****
+
+To run the project locally:
+1. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+2. Set up MongoDB connection:
+```bash
+export MONGODB_URI="mongodb://localhost:27017"
+export DBNAME="hw4db"
+```
+
+3. Run the Flask app:
+```bash
+python3 app.py
+```
+
+4. Open your browser and go to:
+```bash
+http://127.0.0.1:5001/
+```
+
+****
+
+Expected Output:
+
+**Homepage** (`index.html`)
+- Displays a list of all users stored in MongoDB.
+- Each user record includes:
+  - A checkbox for bulk deletion.
+  - An individual **Delete** button for single-record deletion.
+- A **Delete Selected** button deletes all selected users at once.
+- Success or error messages appear after each operation.
+
+**MongoDB**
+- Deleted records are immediately removed from the database.
+- Supports both single and bulk delete operations.
+
+**Render Deployment**
+- The application is deployed on Render and publicly accessible at:  
+  🔗 [https://database-systems-hw3.onrender.com](https://database-systems-hw3.onrender.com)  
+- MongoDB connection is handled via environment variables.
+
+****
+
+Video Demo  
+[▶ 114-1 Database Systems HW4](https://youtu.be/9rz9k-LcLz0)
 
 ## Final Project Submission Area
 ### First Proposal of Final Project (Week 12)
